@@ -1,0 +1,33 @@
+
+spring:
+  profiles:
+    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl
+    username: root
+    password: 123123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+---
+#开发环境
+spring:
+  profiles: dev
+
+girl:
+  cupSize: A
+  age: 16
+
+
+---
+#生产环境
+spring:
+  profiles: prod
+
+girl:
+  cupSize: F
+  age: 20
